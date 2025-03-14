@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <BannerSlide />
       <div className="flex h-auto w-full flex-row items-center justify-between gap-4">
-        <ShortcutButton text="동아리 정보 관리" href="/clubs" />
+        <ShortcutButton text="동아리 정보 관리" href="/club" />
         <ShortcutButton text="활동보고서 관리" href="/reports" />
       </div>
       <NoticeList />
