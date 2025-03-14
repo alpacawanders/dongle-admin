@@ -10,7 +10,7 @@ const BannerSlide = () => {
   const [sliderRef, instanceRef] = useKeenSlider({ initial: 0, loop: true });
 
   return (
-    <div className="relative h-[min(200px,100%)] w-[min(960px,100%)] overflow-hidden rounded-[24px]">
+    <div className="relative h-[200px] w-[min(960px,100%)] overflow-hidden rounded-[24px]">
       <div ref={sliderRef} className="keen-slider h-full w-full">
         <div className="keen-slider__slide lazy__slide bg-red-500">1</div>
         <div className="keen-slider__slide lazy__slide bg-blue-500">2</div>
