@@ -13,7 +13,7 @@ export default function Layout({ admin, club }: Props) {
         <header className="flex h-[80px] min-w-[960px] flex-col items-center justify-center">
           <DongleLogo />
         </header>
-        <main className="h-full w-[min(960px,100%)]">
+        <main className="flex h-full w-[min(960px,100%)] flex-col items-start justify-start gap-[48px]">
           {role === "ADMIN" && admin}
           {role === "CLUB" && club}
         </main>
