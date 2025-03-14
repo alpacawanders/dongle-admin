@@ -18,3 +18,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.keen-slider__slide {
+    min-width: calc(100% + 0px);
+    max-width: calc(100% + 0px);
+    transform: translate3d(0, 0, 0);
+}
