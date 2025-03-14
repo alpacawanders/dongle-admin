@@ -6,12 +6,19 @@ import UploadIcon from "@/components/icons/UploadIcon";
 interface Props {
   maxFiles?: number;
   maxSize?: number;
+  accept?: string;
+  defaultValue?: File[];
 }
 
 // TODO: 파일 삭제 핸들러 구현
-const FileUpload = ({ maxFiles = 5, maxSize = 2 }: Props) => {
+const FileUpload = ({
+  maxFiles = 5,
+  maxSize = 2,
+  accept,
+  defaultValue,
+}: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [files, setFiles] = useState<File[]>([]);
+  const [files, setFiles] = useState<File[]>(defaultValue ?? []);
 
   const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (files.length >= 5) return;
@@ -32,6 +39,7 @@ const FileUpload = ({ maxFiles = 5, maxSize = 2 }: Props) => {
         ref={inputRef}
         className="hidden"
         onChange={onFileChange}
+        accept={accept}
       />
       {files.length <= 0 && (
         <button
